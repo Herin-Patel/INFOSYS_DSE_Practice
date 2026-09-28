@@ -68,7 +68,14 @@ public class Input_Handler {
 
                 // First check if the input given was empty
                 if (input.isEmpty()) {
-                    System.out.println("Error : Input cannot be empty.");
+                    System.out.println("Error : Input cannot be empty !");
+                    System.out.println();
+                    continue;
+                }
+
+                // Now check if input given was zero
+                if (Integer.parseInt(input) == 0) {
+                    System.out.println("Error : Input cannot be a zero !");
                     System.out.println();
                     continue;
                 }
@@ -116,5 +123,11 @@ public class Input_Handler {
     public static void closeScanner() {
         if (scannerObj != null)
             scannerObj.close();
+    }
+
+    public static void displayLines() {
+        for (int i = 0; i < 100; i++)
+            System.out.print("*");
+        System.out.println();
     }
 }
